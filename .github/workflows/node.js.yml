@@ -27,9 +27,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run dev (⚠ może się zawiesić)
-        run: npm run dev
-
       - name: Build
         run: npm run build --if-present
 
