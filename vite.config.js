@@ -9,7 +9,7 @@ const __dirname = dirname(__filename)
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  root: '.',
+  root: process.cwd(),
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
@@ -18,5 +18,8 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    rollupOptions: {
+      input: resolve(__dirname, 'index.html'),
+    },
   },
 })
